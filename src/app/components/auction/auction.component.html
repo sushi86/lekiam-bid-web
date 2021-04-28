@@ -1,0 +1,17 @@
+<h1>Versteigerung meiner CSL Elite Base</h1>
+
+<div class="describtion">
+    Nachdem ich jetzt umgestiegen bin auf eine andere Base würde ich sehr gern meine CSL Elite Base versteigern. Sie wurde Ende Januar 2021 gekauft, ist in einem sehr guten Zustand und funktioniert einwandfrei. Die Originalverpackung ist natürlich vorhanden.
+</div>
+
+<div class="current-bid">
+    Aktuelles Höchstgebot: {{ bid?.Value | currency:'EUR' }}
+</div>
+
+<div class="countdown-wrapper">
+    <countdown [config]="config"></countdown>
+</div>
+
+<div class="bid-wrapper">
+    <button (click)="open();">JETZT BIETEN</button>
+</div>

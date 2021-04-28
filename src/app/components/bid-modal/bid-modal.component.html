@@ -1,0 +1,45 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Gebot abgeben</h4>
+   
+</div>
+<div class="modal-body">
+    <form [formGroup]="bidForm">
+        <div class="form-group">
+            <label for="bid">Dein Gebot</label>
+            <input type="number" class="form-control" id="bid" formControlName="bidValue">
+        </div>
+
+        <div class="row form-group">
+            <div class="col">
+                <label for="firstName">Vorname</label>
+                <input type="text" class="form-control" id="firstName" formControlName="firstName">
+            </div>
+            <div class="col">
+                <label for="lastName">Nachname</label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col">
+                <label for="socialName">Discord- oder Twitchname</label>
+                <input type="text" class="form-control" id="socialName" formControlName="socialName">
+            </div>
+            <div class="col">
+                <label for="email">E-Mail Adresse</label>
+                <input type="text" class="form-control" id="email" formControlName="email">
+            </div>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" formControlName="check">
+            <label class="form-check-label" for="check">Ich habe verstanden, dass dieses Gebot verbindlich ist.</label>
+        </div>
+    </form>
+    <div class="alert alert-danger" role="alert" *ngFor="let e of error">
+        {{ e }}
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="submit" (click)="addBid();" class="btn btn-primary">Gebot abgeben</button>
+</div>
